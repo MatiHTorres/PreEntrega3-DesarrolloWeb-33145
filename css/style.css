@@ -432,7 +432,7 @@ footer {
     box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2), -3px -3px 5px 2px rgba(0, 0, 0, 0.2);
     border-radius: 5px; } }
 
-@media screen and (max-width: 700px) and (orientation: landscape) {
+@media screen and (max-width: 915px) and (orientation: landscape) {
   footer .redes {
     display: flex;
     align-items: center;
