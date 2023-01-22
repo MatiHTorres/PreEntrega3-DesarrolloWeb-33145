@@ -1,7 +1,7 @@
 {
-  "name": "proyecto",
+  "name": "fungeekstore",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fungeek Store , es un E-commerce dedicado a la venta de figuras coleccionables de figuras de animes , peliculas , juegos , etc",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

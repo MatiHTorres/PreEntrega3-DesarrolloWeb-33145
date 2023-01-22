@@ -6,7 +6,7 @@ header {
 
   img {
     border-radius: 5px;
-    box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.2), -3px -3px 5px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: $sombra;
   }
 }
 
@@ -25,10 +25,10 @@ nav {
         align-items: center;
 
         &:hover {
-          border-color: rgba(88, 88, 88, 0.822);
+          border-color: $bordeHover;
           border-top-right-radius: 10px;
           border-bottom-left-radius: 10px;
-          background-color: rgba(255, 255, 255, 0.5);
+          background-color: $backgroundHover;
           box-shadow: $sombra;
         }
       }
@@ -41,12 +41,11 @@ nav {
   }
 
   .menu {
+    @include resetListas();
     display: flex;
     flex-wrap: wrap;
     width: 100vw;
     height: 100%;
-    list-style-type: none;
-    text-decoration: none;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 2% 2% 0;
@@ -59,12 +58,11 @@ nav {
   }
 
   .perfil {
+    @include resetListas();
     display: flex;
     flex-wrap: wrap;
     width: 50%;
     height: 100%;
-    list-style-type: none;
-    text-decoration: none;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 0 2% 2%;

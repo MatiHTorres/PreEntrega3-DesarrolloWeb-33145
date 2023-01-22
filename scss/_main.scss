@@ -1,15 +1,14 @@
 div {
     #filtro {
         grid-area: filtro;
-        background-color: rgba(173, 171, 189, 0.85);
+        background-color: rgba(150, 149, 163, 0.85);
         margin: 0 0 1vh 1vh;
         border-radius: 5px;
         border: 1px solid rgba(0, 0, 0, 0.3);
-        box-shadow: 1px 1px 5px 2px rgba(25, 0, 255, 0.2), -1px -1px 5px 2px rgba(25, 0, 255, 0.2);
+        box-shadow: $sombrab;
 
         section {
-            display: flex;
-            flex-direction: column;
+            @include flex();
             width: 100%;
             height: 100%;
 
@@ -22,21 +21,19 @@ div {
                 justify-content: center;
 
                 .ulFiltros {
-                    display: flex;
-                    flex-direction: column;
+                    @include flex();
+                    @include resetListas();
                     width: 75%;
-                    list-style-type: none;
-                    text-decoration: none;
                     justify-content: space-evenly;
                     font-family: $fuenteSamurai;
                     font-size: 2vmax;
-                    text-shadow: $textShadowBlue;
+                    text-shadow: $textShadowWhite;
 
                     .tituloFiltros {
                         text-align: center;
                         color: #333;
                         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        text-shadow: 1px 1px rgba(255, 255, 255, 0.541);
+                        text-shadow: $textShadowWhite;
                     }
                 }
             }
@@ -45,37 +42,36 @@ div {
 
     #filtro2 {
         grid-area: filtro;
-        background-color: rgba(173, 171, 189, 0.85);
+        background-color: rgba(150, 149, 163, 0.85);
         margin: 0 3vw 2vh 3vw;
         border-radius: 5px;
         border: 1px solid rgba(0, 0, 0, 0.3);
-        box-shadow: 1px 1px 5px 2px rgba(25, 0, 255, 0.2), -1px -1px 5px 2px rgba(25, 0, 255, 0.2);
+        box-shadow: $sombrab;
 
         section {
             nav {
-                display: flex;
+                
+                @include flexCenter();
                 margin: 0;
                 padding: 0;
                 width: 100%;
                 height: 100%;
-                justify-content: center;
+                
 
                 .ulFiltros2 {
-                    display: flex;
-                    flex-direction: row;
+                    @include flex(row);
+                    @include resetListas();
                     width: 75%;
-                    list-style-type: none;
-                    text-decoration: none;
                     justify-content: space-evenly;
                     font-family: $fuenteSamurai;
                     font-size: 2vmax;
-                    text-shadow: $textShadowBlue;
+                    text-shadow: $textShadowWhite;
 
                     .tituloFiltros {
                         text-align: center;
                         color: #333;
                         border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-                        text-shadow: 1px 1px rgba(255, 255, 255, 0.541);
+                        text-shadow: textShadowWhite;
                     }
                 }
             }
@@ -84,7 +80,7 @@ div {
 
     #main {
         grid-area: main;
-        background-color: rgba(8, 8, 8, 0.65);
+        background-color:$backgroundMains;
         display: flex;
         flex-flow: wrap;
         flex-wrap: wrap;
@@ -96,7 +92,7 @@ div {
         box-shadow: $sombra;
 
         #divMain {
-            margin: 1vh 1vh 1vh 1vh;
+            margin: 1vh;
 
             img {
                 margin: 5px;
@@ -113,7 +109,7 @@ div {
 
     #mainC {
         grid-area: main;
-        background-color: rgba(8, 8, 8, 0.856);
+        background-color:$backgroundMains;
         display: flex;
         flex-flow: wrap;
         flex-wrap: wrap;
@@ -128,12 +124,12 @@ div {
         box-shadow: $sombra;
 
         .subtituloContacto {
-            color: whitesmoke;
+            color: $colorLetra;
             text-shadow: 1px 1px rgb(201, 2, 2);
         }
 
         .mapa {
-            box-shadow: 3px 3px 5px 2px rgba(17, 0, 255, 0.2), -3px -3px 5px 2px rgba(4, 0, 255, 0.2);
+            box-shadow: $sombraImg;
         }
 
         main {
@@ -143,7 +139,7 @@ div {
         .cajaEncargo {
             width: 60vw;
             height: 25vh;
-            box-shadow: 3px 3px 5px 2px rgba(17, 0, 255, 0.2), -3px -3px 5px 2px rgba(4, 0, 255, 0.2);
+            box-shadow: $sombraImg;
             resize: none;
             font-family: $fuenteSamurai;
             text-align: center;
@@ -168,18 +164,18 @@ div {
             width: 100%;
 
             main {
-                background-color: rgba(8, 8, 8, 0.85);
+                background-color: $backgroundMains;
                 color: $colorLetra;
                 min-width: 60%;
                 font-family: $fuenteSamurai;
                 font-size: 2vmax;
                 padding: 0 10px 10px 10px;
                 border-radius: 5px;
-                box-shadow: 3px 3px 5px 2px rgba(0, 0, 0, 0.253), -3px -3px 5px 2px rgba(0, 0, 0, 0.253);
+                box-shadow: $sombra;
                 text-shadow: 1px 1px rgba(253, 0, 0, 0.5);
 
                 fieldset {
-                    display: flex;
+                    @include flex();
                     align-items: center;
                     justify-content: center;
                     min-height: 35vh;
@@ -187,8 +183,7 @@ div {
                     border-radius: 5px;
 
                     form {
-                        display: flex;
-                        flex-direction: column;
+                        @include flex();
                         justify-content: center;
                         align-content: center;
                         min-height: 35vh;

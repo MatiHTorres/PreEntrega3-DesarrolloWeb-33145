@@ -1,16 +1,16 @@
-@media screen and (max-width: 1920px) {
+@include vista {
     div #main #divMain img {
         width: 15%;
     }
 }
 
-@media screen and (max-width: 1540px) {
+@include vista (1540px) {
     div #main #divMain img {
         width: 18%;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@include vista(1200px) {
     div #main #divMain img {
         width: 23%;
     }
@@ -52,7 +52,7 @@
 
 }
 
-@media screen and (max-width: 800px) {
+@include vista (800px) {
     div #main #divMain img {
         width: 30%;
     }
@@ -120,8 +120,7 @@
         width: 100%;
         height: 6vh;
         margin: 0 1vh 1vh 1vh;
-        list-style-type: none;
-        text-decoration: none;
+        @include resetListas();
         justify-content: space-evenly;
         align-items: center;
         font-family: $fuenteSamurai;
@@ -143,8 +142,7 @@
         flex-wrap: wrap;
         width: 100%;
         height: 6vh;
-        list-style-type: none;
-        text-decoration: none;
+        @include resetListas();
         justify-content: space-evenly;
         align-items: center;
         font-family: $fuenteSamurai;
@@ -158,41 +156,38 @@
 
 }
 
-@media (max-width: 700px) and (orientation: landscape) {
-    footer .redes {
-        display: flex;
-        height: 10vh;
-        align-items: center;
-        justify-content: center;
+@include vista(700px) {
+    @media (orientation: landscape) {
+        footer .redes {
+            @include flexCenter();
+            height: 10vh;
+        }
+
+        footer .redes ul {
+            display: flex;
+            width: 100;
+        }
+
+        footer .redes ul li {
+            @include flex();
+            width: auto;
+            height: auto;
+            text-align: center;
+
+        }
+
+        footer .redes ul li a {
+            @include flexCenter();
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+        }
     }
 
-    footer .redes ul {
-        display: flex;
-        width: 100;
-    }
-
-    footer .redes ul li {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: auto;
-        text-align: center;
-
-    }
-
-    footer .redes ul li a {
-        display: flex;
-        padding: 0;
-        width: 30px;
-        height: 30px;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
 }
 
-@media screen and (max-width: 455px) {
+@include vista (455px) {
 
     div #main #divMain img {
         width: 45%;
@@ -203,8 +198,7 @@
     }
 
     .ulFiltros {
-        display: flex;
-        flex-direction: row;
+        @include flex(row);
         flex-wrap: wrap;
     }
 
@@ -223,10 +217,9 @@
     }
 
     footer .redes {
-        display: flex;
+        @include flexCenter();
         height: 7vh;
-        align-items: center;
-        justify-content: center;
+        
     }
 
     footer .redes ul {
@@ -240,22 +233,18 @@
         width: auto;
         height: auto;
         text-align: center;
-
     }
 
     footer .redes ul li a {
-        display: flex;
+        @include flexCenter();
         padding: 0;
         width: 30px;
         height: 30px;
         text-align: center;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
     }
 }
 
-@media screen and (max-width: 290px) {
+@include vista (290px) {
     div #main #divMain img {
         width: 95%;
     }
